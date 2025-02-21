@@ -7,12 +7,12 @@
 
 apt-get install gnupg
 
-![рисунок 1](img/1.png)
+![рисунок 1](1.png)
 
 sudo apt update
 
 
-![рисунок 2](img/2.png)
+![рисунок 2](2.png)
 
 sudo apt install mysql-server
 
@@ -21,26 +21,26 @@ sudo apt install mysql-server
 
 Вход в консоль MySQL: mysql -u root –p
 
-![рисунок 3](img/3.png)
+![рисунок 3](3.png)
 
 CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
 создаёт пользователя MySQL с именем sys_temp, доступом только с локального компьютера и паролем password.
 
-![рисунок 4](img/4.png)
+![рисунок 4](4.png)
 
 1.3. Выполните запрос на получение списка пользователей в базе данных. (скриншот)
 
 
 SELECT User, Host FROM mysql.user;
 
-![рисунок 5](img/5.png)
+![рисунок 5](5.png)
 
 1.4. Дайте все права для пользователя sys_temp.
 
 
 GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost';
 
-![рисунок 6](img/6.png)
+![рисунок 6](6.png)
 
 
 1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
@@ -49,7 +49,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost';
 SHOW GRANTS FOR 'sys_temp'@'localhost';
 
 
-![рисунок 7](img/7.png)
+![рисунок 7](7.png)
 
 
 
@@ -59,7 +59,7 @@ SHOW GRANTS FOR 'sys_temp'@'localhost';
 
 mysql -u sys_temp -p
 
-![рисунок 8](img/8.png)
+![рисунок 8](8.png)
 
 
 Для смены типа аутентификации с sha2 используйте запрос:
@@ -72,13 +72,13 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 sudo apt install unzip -y
 установим unzip
 
-![рисунок 9](img/9.png)
+![рисунок 9](9.png)
 
 
 unzip ./sakila-db.zip 
 
 
-![рисунок 10](img/10.png)
+![рисунок 10](10.png)
 
 1.7. Восстановите дамп в базу данных.
 
@@ -89,7 +89,7 @@ https://downloads.mysql.com/docs/sakila-db.zip
 Разархивируем и запомним путь к разархивированной части;
 
 
-![рисунок 11](img/11.png)
+![рисунок 11](11.png)
 
 
 CREATE DATABASE db1 DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
@@ -100,7 +100,7 @@ cd sakila-db
 mysql -u root -p db1 < sakila-schema.sql;
 mysql -u root -p db1 < sakila-data.sql;
 
-![рисунок 12](img/12.png)
+![рисунок 12](12.png)
 
 
 
@@ -111,26 +111,26 @@ mysql -u root -p db1 < sakila-data.sql;
 Зайдем на сайт Dbevar
 
 
-![рисунок 13](img/13.png)
+![рисунок 13](13.png)
 
 Скачиваем версию для Debian
 
-![рисунок 14](img/14.png)
+![рисунок 14](14.png)
 
 Выбираем Open With
 
-![рисунок 15](img/15.png)
+![рисунок 15](15.png)
 
 
 Software install
 Потом Open
 
-![рисунок 16](img/16.png)
+![рисунок 16](16.png)
 
 Запустим Dbebar подключимся к базе данных и просморим Er диаграмму
 
 
-![рисунок 17](img/17.png)
+![рисунок 17](17.png)
 
 
 
@@ -161,3 +161,6 @@ payment               |                    	payment_id
 rental	              |                        rental_id
 staff                 |                      staff_id
 store	              |                     store_id
+
+
+![рисунок 18](18.png)
